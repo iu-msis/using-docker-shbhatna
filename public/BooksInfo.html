@@ -54,7 +54,7 @@
 </head>
 <body>
   <div class="container BookTable">
-	<table>
+	<table id="tableID">
     <thead>
 		<tr>
 			<th>Title</th>
@@ -181,6 +181,11 @@
     });
   }, false);
 })();
+</script>
+
+<script src='JS/tablesort.min.js'></script>
+<script>
+  new Tablesort(document.getElementById('tableID'));
 </script>
 
 </body>
