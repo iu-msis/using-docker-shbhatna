@@ -46,9 +46,8 @@
 	</style>
 </head>
 <body>
-  <div id=id="patientWaitingApp">
+  <div id="patientWaitingApp">
     <div class="patientWaiting patient"
- :class="patient.priority +'Priority'"
  v-for="patient in patients">
 	<table> <!--Table Style from HtmlDog - https://www.htmldog.com/examples/tablelayout1/-->
     <thead>
@@ -60,27 +59,27 @@
   <tbody>
 		<tr>
 			<td>Name</td>
-			<td>Shobhit Bhatnagar</td>
+			<td>{{ results.name.last }}</td>
 		</tr>
 		<tr>
-			<td>Country</td>
-			<td>India</td>
+			<td>Address</td>
+			<td>{{ patient.lastName }}</td>
 		</tr>
 		<tr>
 			<td>Age</td>
-			<td>22</td>
+			<td>{{ patient.age }}</td>
 		</tr>
 		<tr>
 			<td>Birthdate</td>
-			<td> 22 June 1997</td>
+			<td>{{ patient.date }}</td>
 		</tr>
 		<tr>
       <td>Email Address</td>
-			<td><div class="Container link"><a href="mailto:shbhatna@iu.edu">shbhatna@iu.edu</a></div></td> <!--Instructions-->
+			<td><div class="Container link">{{ patient.email }}</div></td> <!--Instructions-->
 		</tr>
     <tr>
         <td>Picture</td>
-        <td><a href="https://smallimg.pngkey.com/png/small/0-7381_bold-black-stick-figure-stick-man-with-no.png"><img src="https://smallimg.pngkey.com/png/small/0-7381_bold-black-stick-figure-stick-man-with-no.png" alt="Stick Figure">
+        <td>{{ patient.picture }}
           <br>
           <a id="Link" href="https://smallimg.pngkey.com/png/small/0-7381_bold-black-stick-figure-stick-man-with-no.png"> Source: PNG Key </a>
         </td><!--GoogleImage-->
