@@ -47,7 +47,7 @@
 </head>
 
 <body>
-  <div id='personWaitingApp'>
+  <div id='personWaitingApp' v-if="persons.name">
 
   <div class="Container BookTable">
 
@@ -61,7 +61,7 @@
     <tbody>
   		<tr>
   			<td>Name</td>
-  			<td>{{ persons.name.first }} {{ persons.name.last}}</td>
+  			<td>{{ persons.name.first }} {{ persons.name.last}}</td> <!--Consulted Alex-->
   		</tr>
   		<tr>
   			<td>Address</td>
@@ -81,17 +81,16 @@
   		</tr>
       <tr>
           <td>Picture</td>
-          <td> <img v-bind:src="persons.picture.large">
+          <td><a href="https://randomuser.me/"> <img v-bind:src="persons.picture.large">
             <br>
-            <a id="Link" href="https://smallimg.pngkey.com/png/small/0-7381_bold-black-stick-figure-stick-man-with-no.png"> Source: PNG Key </a>
+            <a id="Link" href="https://randomuser.me/"> Source: Random User </a>
           </td><!--GoogleImage-->
-
       </tr>
     </tbody>
   </table>
       </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="JS/RandomUser.js"></script>
+<script src="JS/RandomUser.js"></script> <!--Consulted Alex-->
 </body>
 </html>
