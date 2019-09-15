@@ -1,3 +1,4 @@
+//Consulted Griffen Jung, Roger Bowen, Alex Braunscheidel, Simon Mantlo
 var RandomUser = new Vue({
   el: '#personWaitingApp',
   data: {
