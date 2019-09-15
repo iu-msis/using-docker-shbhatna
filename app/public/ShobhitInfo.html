@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="CSS/site.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <title>My Page Title</title>
 </head>
 <body>
@@ -46,8 +45,12 @@
 		}
 	</style>
 </head>
+
 <body>
+  <div id='personWaitingApp'>
+
   <div class="Container BookTable">
+
     <table> <!--Table Style from HtmlDog - https://www.htmldog.com/examples/tablelayout1/-->
       <thead>
   		<tr>
@@ -58,35 +61,37 @@
     <tbody>
   		<tr>
   			<td>Name</td>
-  			<td>{{patients.name.first}}</td>
+  			<td>{{ persons.name.first }} {{ persons.name.last}}</td>
   		</tr>
   		<tr>
   			<td>Address</td>
-  			<td>{{ patients.name.last}}</td>
+  			<td>{{ persons.nat }}</td>
   		</tr>
   		<tr>
   			<td>Age</td>
-  			<td>{{ patients.age }}</td>
+  			<td>{{ persons.dob.age }}</td>
   		</tr>
   		<tr>
   			<td>Birthdate</td>
-  			<td>{{ patients.date }}</td>
+  			<td>{{ persons.dob.date }}</td>
   		</tr>
   		<tr>
         <td>Email Address</td>
-  			<td><div class="Container link">{{ patients.email }}</div></td> <!--Instructions-->
+  			<td> <a v-bind:href="`mailto:${persons.email}`">{{ persons.email }}</a></td> <!--Instructions and Vue.Js Website-->
   		</tr>
       <tr>
           <td>Picture</td>
-          <td>{{ patients.picture }}
+          <td> <img v-bind:src="persons.picture.large">
             <br>
             <a id="Link" href="https://smallimg.pngkey.com/png/small/0-7381_bold-black-stick-figure-stick-man-with-no.png"> Source: PNG Key </a>
           </td><!--GoogleImage-->
 
       </tr>
     </tbody>
-	</table>
+  </table>
+      </div>
 </div>
-  <script src="js/waiting.app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="JS/RandomUser.js"></script>
 </body>
 </html>
