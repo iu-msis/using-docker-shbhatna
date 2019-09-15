@@ -1,4 +1,4 @@
-var waitingApp = new Vue({
+var RandomUser = new Vue({
   el: '#patientWaitingApp',
   data: {
     patients:{ }
@@ -8,7 +8,7 @@ var waitingApp = new Vue({
     fetchPatients() {
       fetch('https://randomuser.me/api/')
       .then(response => response.json())
-      .then(json=>{waitingApp.patients=json.results[0]});
+      .then(json=>{RandomUser.patients=json.results[0]})
     }
   },
 
