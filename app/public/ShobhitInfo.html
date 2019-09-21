@@ -51,7 +51,7 @@
   <div id='personWaitingApp' v-if="persons.name"> <!--Consulted Griffen Jung, Roger Bowen, Alex Braunscheidel, Simon Mantlo-->
 
   <div class="Container BookTable">
-
+<form @submit.prevent="fetchPersons">
     <table> <!--Table Style from HtmlDog - https://www.htmldog.com/examples/tablelayout1/-->
       <thead>
   		<tr>
@@ -89,6 +89,8 @@
       </tr>
     </tbody>
   </table>
+  <Center><input class="btn btn-primary" type="submit" value="Submit"></Center>
+</form>
       </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
